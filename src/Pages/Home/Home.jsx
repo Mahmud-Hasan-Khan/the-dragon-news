@@ -6,7 +6,7 @@ import LatestNews from "../Home/LatestNews"
 
 const Home = () => {
     return (
-        <div className="mx-2 md:mx-auto">
+        <div className="m-2 md:mx-auto">
             <Header></Header>
             <LatestNews></LatestNews>
             <Navbar></Navbar>
@@ -17,7 +17,7 @@ const Home = () => {
                 <div className="md:col-span-2 border">
                     <h2 className="text-2xl">News coming Soon</h2>
                 </div>
-                <div className="border">
+                <div>
                     <RightSideNav></RightSideNav>
                 </div>
             </div>
