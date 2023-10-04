@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
     return (
-        <div className="max-w-6xl mx-auto mt-12 font-poppins">
+        <div className="max-w-6xl mx-auto mt-2 font-poppins">
             <Outlet></Outlet>
         </div>
     );
