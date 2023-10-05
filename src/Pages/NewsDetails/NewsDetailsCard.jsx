@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const NewsDetailsCard = ({ getNews }) => {
-    console.log(getNews);
-    const { title, image_url, details, author, published_date, _id } = getNews;
+    // console.log(getNews);
+    const { title, image_url, details, author } = getNews;
     return (
         <div>
             <div className="md:col-span-3 border space-y-10">
@@ -65,5 +65,9 @@ const NewsDetailsCard = ({ getNews }) => {
         </div>
     );
 };
+
+NewsDetailsCard.propTypes = {
+    getNews: PropTypes.node
+}
 
 export default NewsDetailsCard;

@@ -8,19 +8,19 @@ import NewsCard from "./NewsCard";
 
 const Home = () => {
     const news = useLoaderData();
-    console.log(news);
+    // console.log(news);
     return (
         <div className="m-2 md:mx-auto">
             <Header></Header>
             <LatestNews></LatestNews>
             <Navbar></Navbar>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="border">
+                <div>
                     <LeftSideNav></LeftSideNav>
                 </div>
-                <div className="md:col-span-2 border space-y-10">
+                <div className="md:col-span-2 space-y-10">
                     {
-                        news.map(singleNews => <NewsCard key={singleNews._id} singleNews={singleNews}></NewsCard>)
+                        news?.map(singleNews => <NewsCard key={singleNews._id} singleNews={singleNews}></NewsCard>)
                     }
                 </div>
                 <div>

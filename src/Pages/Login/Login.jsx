@@ -7,27 +7,29 @@ import { UserContext } from "../../Providers/AuthProviders";
 const Login = () => {
     const { loginUser } = useContext(UserContext);
     const location = useLocation();
-    console.log('location in the login page', location);
+    // console.log('location in the login page', location);
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         //login User
         loginUser(email, password)
             .then((userCredential) => {
                 // Signed in 
                 const loggedUser = userCredential.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 navigate(location?.state ? location.state : "/");
                 // ...
             })
             .catch((error) => {
                 const errorCode = error.code;
+                console.log(errorCode);
                 const errorMessage = error.message;
+                // console.log(errorMessage);
             });
 
     }

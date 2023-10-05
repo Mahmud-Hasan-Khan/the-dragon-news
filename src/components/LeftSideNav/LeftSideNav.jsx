@@ -8,18 +8,18 @@ const LeftSideNav = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch('../../../public/categories.json')
+        fetch('/categories.json')
             .then(res => res.json())
             .then(data => setCategories(data))
 
     }, []);
-    console.log(categories);
+    // console.log(categories);
 
     return (
         <div className="space-y-6">
             <h2 className="text-xl font-semibold">All Categories</h2>
             {
-                categories.map(category => <NavLink to={`category/${category.id}`} className="block ml-4 text-xl font-semibold  mx-auto" key={category.id}>{category.name} </NavLink>)
+                categories?.map(category => <NavLink to={`category/${category.id}`} className="block ml-4 text-xl font-semibold  mx-auto" key={category.id}>{category.name} </NavLink>)
             }
             <div>
                 <img src={leftImg1} alt="" />

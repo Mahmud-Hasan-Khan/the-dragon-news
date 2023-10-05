@@ -17,6 +17,7 @@ const Navbar = () => {
             })
             .catch((error) => {
                 // An error happened.
+                console.log(error.message);
             });
     }
 
@@ -54,7 +55,6 @@ const Navbar = () => {
                     <>
                         <Link to="/login" className="btn">Login</Link>
                     </>
-
                 }
             </div>
         </div>

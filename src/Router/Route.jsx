@@ -14,14 +14,14 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('../../public/news.json')
+                loader: () => fetch('/news.json')
             },
             {
                 path: "/news/:id",
                 element: <PrivateRoute>
                     <NewsDetails></NewsDetails>
                 </PrivateRoute>,
-                loader: () => fetch('../../public/news.json')
+                loader: () => fetch('/news.json')
 
             },
             {
